@@ -1,0 +1,119 @@
+{
+    "categories": {
+      "مناهج الإنجليزي": {
+        "Smart English": {
+          "Audio": {
+            "Grade 1": [
+              {
+                "file_id": "ABC123",
+                "filename": "Lesson1.mp3",
+                "tags": ["lesson1", "audio", "smart english"]
+              },
+              {
+                "file_id": "XYZ456",
+                "filename": "Lesson2.mp3",
+                "tags": ["lesson2", "audio", "smart english"]
+              }
+            ],
+            "Grade 2": [     ]
+          },
+          "Flash Cards": {     },
+          "Videos": {     },
+          "Tests": {     },
+          "Study Plans": {     }
+        },
+
+        "English For All": {  
+          "Audio": {
+            "Grade 1": [
+              {
+                "file_id": "ABC123",
+                "filename": "Lesson1.mp3",
+                "tags": ["lesson1", "audio", "smart english"]
+              },
+              {
+                "file_id": "XYZ456",
+                "filename": "Lesson2.mp3",
+                "tags": ["lesson2", "audio", "smart english"]
+              }
+            ],
+            "Grade 2": [     ]
+          },
+
+          "Flash Cards": {     },
+
+          "Videos": {     },
+
+          "Tests": {
+            "Grade 1": [
+              {
+                "file_id": "https://t.me/c/2562382760/3",
+                "filename": "unit1.pdf",
+                "tags": ["unit1", "test", "english for all"]
+              },
+
+              {
+                "file_id": "https://t.me/c/2562382760/4",
+                "filename": "unit2.pdf",
+                "tags": ["unit2", "test", "english for all"]
+              },
+
+              {
+                "file_id": "https://t.me/c/2562382760/9",
+                "filename": "unit3.pdf",
+                "tags": ["unit3", "test", "english for all"]
+              },
+
+              {
+                "file_id": "https://t.me/c/2562382760/5",
+                "filename": "unit4.pdf",
+                "tags": ["unit4", "test", "english for all"]
+              },
+
+              {
+                "file_id": "https://t.me/c/2562382760/6",
+                "filename": "unit5.pdf",
+                "tags": ["unit5", "test", "english for all"]
+              },
+
+              {
+                "file_id": "https://t.me/c/2562382760/7",
+                "filename": "unit6.pdf",
+                "tags": ["unit6", "test", "english for all"]
+              },
+
+              {
+                "file_id": "https://t.me/c/2562382760/2",
+                "filename": "midterm.pdf",
+                "tags": ["midterm", "test", "english for all"]
+              },
+
+              {
+                "file_id": "https://t.me/c/2562382760/8",
+                "filename": "final.pdf",
+                "tags": ["final", "test", "english for all"]
+              }
+            ],
+            "Grade 2": [     ]
+          },
+
+          "Study Plans": {     }
+           }
+      },
+
+      "Arabic Curricula": {
+        "الحاسوب للجميع": {
+          "فيديوهات": {
+            "الصف الأول": [
+              {
+                "file_id": "AA1234",
+                "filename": "intro.mp4",
+                "tags": ["مقدمة", "الحاسوب", "فيديو"]
+              }
+            ]
+          }
+        }
+      }
+    }
+  }
+  
