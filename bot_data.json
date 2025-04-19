@@ -15,6 +15,76 @@
         "الصف الأول": [],
         "الصف الثاني": []
       }
+    },
+
+    "إنجلش فورأوول": {
+      "الصوتيات": {
+        "الصف الأول": [],
+        "الصف الثاني": []
+      },
+
+      "الاختبارات": {
+        "الصف الأول": [
+          {
+            "file_id": "https://t.me/c/2562382760/3",
+            "filename": "unit 1.English for All 1 Test.pdf",
+            "type": "test"
+          },
+
+          {
+            "file_id": "https://t.me/c/2562382760/4",
+            "filename": "unit 2.English for All 1 Test.pdf",
+            "type": "test"
+          },
+
+          {
+            "file_id": "https://t.me/c/2562382760/9",
+            "filename": "unit 3.English for All 1 Test.pdf",
+            "type": "test"
+          },
+
+          {
+            "file_id": "https://t.me/c/2562382760/5",
+            "filename": "unit 4 Test.English for All 1.pdf",
+            "type": "test"
+          },
+
+          {
+            "file_id": "https://t.me/c/2562382760/6",
+            "filename": "unit 5 Test.English for All 1.pdf",
+            "type": "test"
+          },
+
+          {
+            "file_id": "https://t.me/c/2562382760/7",
+            "filename": "unit 6 Test.English for All 1.pdf",
+            "type": "test"
+          },
+
+          {
+            "file_id": "https://t.me/c/2562382760/2",
+            "filename": "E for All 1 - Midterm Test.pdf",
+            "type": "test"
+          },
+
+          {
+            "file_id": "https://t.me/c/2562382760/8",
+            "filename": "E for All 1 - Final Test.pdf",
+            "type": "test"
+          }
+        ],
+        "الصف الثاني": []
+      },
+
+      "فلاش كارد": {
+        "الصف الأول": [],
+        "الصف الثاني": []
+      },
+
+      "الفيديوهات": {
+        "الصف الأول": [],
+        "الصف الثاني": []
+      }
     }
   }
 }
