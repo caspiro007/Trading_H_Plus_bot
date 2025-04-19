@@ -94,7 +94,64 @@ async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE):
     else:
         await update.message.reply_text("يرجى اختيار خيار من القائمة.")
 
+# لتخزين الملفات التي يرسلها الأدمن
+pending_files = {}
+
+async def handle_file(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    user = update.effective_user
+    if user.username != ADMIN_USERNAME:
+        return  # تجاهل أي ملفات من غير الأدمن
+
+    msg = update.message
+    file = msg.document or msg.audio or msg.video or (msg.photo[-1] if msg.photo else None)
+    file_type = 'document' if msg.document else 'audio' if msg.audio else 'video' if msg.video else 'photo'
+
+    if not file:
+        await msg.reply_text("الملف غير مدعوم.")
+        return
+
+    file_id = file.file_id
+    file_name = getattr(file, 'file_name', 'بدون اسم')
+
+    # خزّن مؤقتاً
+    pending_files[user.id] = {
+        "file_id": file_id,
+        "file_name": file_name,
+        "type": file_type
+    }
+
+    await msg.reply_text(
+        "تم استلام الملف بنجاح!\nالرجاء إرسال مسار الحفظ (مثال: مناهج الإنجليزي > سمارت إنجلش > الصوتيات > الصف الأول)"
+    )
+
+    async def handle_path_input(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    user = update.effective_user
+    if user.id not in pending_files:
+        return
+
+    path_text = update.message.text.strip()
+    levels = [lvl.strip() for lvl in path_text.split(">")]
+
+    if len(levels) != 4:
+        await update.message.reply_text("يرجى إدخال المسار بدقة يتكون من 4 مستويات مفصولة بـ '>'")
+        return
+
+    # جهّز البيانات
+    file_data = pending_files.pop(user.id)
+    current = bot_data
+    for level in levels[:-1]:
+        current = current.setdefault(level, {})
+    final_level = levels[-1]
+    current.setdefault(final_level, []).append(file_data)
+
+    # احفظ في الملف
+    save_bot_data()
+
+    await update.message.reply_text("تم حفظ الملف بنجاح!")
+
 app = ApplicationBuilder().token(BOT_TOKEN).build()
 app.add_handler(CommandHandler("start", start))
+app.add_handler(MessageHandler(filters.Document.ALL | filters.Audio.ALL | filters.Video.ALL | filters.PHOTO, handle_file))
+app.add_handler(MessageHandler(filters.TEXT & filters.User(username=ADMIN_USERNAME), handle_path_input))
 app.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND, handle_message))
 app.run_polling()
